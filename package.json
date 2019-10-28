@@ -1,0 +1,27 @@
+{
+  "name": "codon",
+  "version": "1.0.0",
+  "description": "used to manipulate and convert genetic strings from nucleotide to codon to protein",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanEscandor/codon.git"
+  },
+  "keywords": [
+    "nucleotide",
+    "codon",
+    "amino",
+    "acid",
+    "genetics",
+    "bioinformatics"
+  ],
+  "author": "Nathan Escandor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NathanEscandor/codon/issues"
+  },
+  "homepage": "https://github.com/NathanEscandor/codon#readme"
+}
