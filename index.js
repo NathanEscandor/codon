@@ -1,11 +1,57 @@
 const tables = require('./tables.js');
 
-function toComplement (nucSeq) {
+dnaToRna (nucSeq) {
+  return nucSeq.replace(/T/g, "U");
+}
+
+rnaToDna (nucSeq) {
+  return nucSeq.replace(/U/g, "T");
+}
+
+//takes in nucleotide string sequence, returns it in number form
+//eg nucStrToVal('TCCTTA') --> '011002'
+nucStrToVal (nucSeq) {
+  let valSeq = '';
+
+  for (i in nucSeq) {
+    switch (nucSeq[i]) {
+      case 'T':
+        valSeq += '0';
+        break;
+      case 'C':
+        valSeq += '1';
+        break;
+      case 'A':
+        valSeq += '2';
+        break;
+      case 'G':
+        valSeq += '3';
+        break;
+    }
+  }
+  return valSeq;   
+}
+
+//takes in nucleotide value sequence, returns it in nucleotide base form
+//eg nucStrToVal('011002') --> 'TCCTTA'
+nucValToStr (valSeq) {
+  let nucSeq = "";
+
+  for (i in valSeq) {
+    nucSeq += tables.nucleotide[valSeq[i]]; //nje: might need to cast this to int first
+  }
+  return valSeq; 
+}
+
+function nucStrToComplement (nucSeq) {
   let complement = "";
 
   for (i in nucSeq) {
     switch (nucSeq[i]) {
       case 'T':
+        complement += 'A';
+        break;
+      case 'U':
         complement += 'A';
         break;
       case 'C':
@@ -19,46 +65,39 @@ function toComplement (nucSeq) {
         break;
     }
   }
-  return complement;
+  return complement; 
 }
 
-function nucValue (nucSeq) {
-  let temp_seq = "";
-
-  for (i in nucSeq) {
-    switch (nucSeq[i]) {
-      case 'T':
-        temp_seq += '0';
-        break;
-      case 'C':
-        temp_seq += '1';
-        break;
-      case 'A':
-        temp_seq += '2';
-        break;
-      case 'G':
-        temp_seq += '3';
-        break;
-    }
-  }
-  return temp_seq;
-}
-
-function toRNA (nucSeq) {
-  return nucSeq.replace(/T/g, "U");
-}
-
-function toDNA (nucSeq) {
-  return nucSeq.replace(/U/g, "T");
-}
-
-function toCodon (nucSeq) {
+//splits nucleotide string into triplets
+//eg: splitToCodon('AUGACCTCC') --> ['AUG', 'ACC', 'TCC']
+//nje: should maybe test if the last element of split array is length 3
+splitToCodon (nucSeq) {
   const split = nucSeq.match(/.{1,3}/g);
-  console.log(split[0]);
+  return split;
 }
 
-function toIndex (codon) {
-  return parseInt((nucValue(codon)), 4);
+//converts array of codon strings to their index from 0-63
+//nje: this could be a map or some other data structure later to do forward and backward lookup
+codStrToVal (codSeq) {
+  codStrArr = [];
+  for (i in codSeq) {
+    const cod_index = parseInt((nucStrToVal(codSeq[i])), 4); //converts from base4 to base 10
+    codStrArr.push(cod_index);
+  }
+  return codStrArr;
 }
 
-console.log(tables.codon[parseInt((nucValue(c)), 4)]);
+codValToStr (codSeq) {
+  codStrArr = [];
+  for (i in codSeq) {
+    codStrArr.push(tables.codon[codSeq[i]]);
+  }
+  return codStrArr;
+}
+
+codValToAminoAcid (codSeq) {
+  aminoAcidArr = [];
+  for (i in codSeq) {
+    aminoAcidArr.push(tables.aminoacid[codSeq[i]]);
+  }
+}
