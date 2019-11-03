@@ -43,7 +43,34 @@ nucValToStr (valSeq) {
   return valSeq; 
 }
 
-function nucStrToComplement (nucSeq) {
+//nje: need to separate this into dnaStrToComplement and rnaStrToComplement
+// function nucStrToComplement (nucSeq) {
+//   let complement = "";
+
+//   for (i in nucSeq) {
+//     switch (nucSeq[i]) {
+//       case 'T':
+//         complement += 'A';
+//         break;
+//       case 'U':
+//         complement += 'A';
+//         break;
+//       case 'C':
+//         complement += 'G';
+//         break;
+//       case 'A':
+//         complement += 'T';
+//         break;
+//       case 'G':
+//         complement += 'C';
+//         break;
+//     }
+//   }
+//   return complement; 
+// }
+
+//nje: maybe the default case should throw an error?
+function dnaStrToComplement (nucSeq) {
   let complement = "";
 
   for (i in nucSeq) {
@@ -51,6 +78,26 @@ function nucStrToComplement (nucSeq) {
       case 'T':
         complement += 'A';
         break;
+      case 'C':
+        complement += 'G';
+        break;
+      case 'A':
+        complement += 'T';
+        break;
+      case 'G':
+        complement += 'C';
+        break;
+    }
+  }
+  return complement; 
+}
+
+//nje: again, maybe default should throw an error printing the unknown nuc character
+function rnaStrToComplement (nucSeq) {
+  let complement = "";
+
+  for (i in nucSeq) {
+    switch (nucSeq[i]) {
       case 'U':
         complement += 'A';
         break;
@@ -58,7 +105,7 @@ function nucStrToComplement (nucSeq) {
         complement += 'G';
         break;
       case 'A':
-        complement += 'T';
+        complement += 'U';
         break;
       case 'G':
         complement += 'C';
