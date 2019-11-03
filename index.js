@@ -1,10 +1,10 @@
 const tables = require('./tables.js');
 
-dnaToRna (nucSeq) {
+dnaStrToRna (nucSeq) {
   return nucSeq.replace(/T/g, "U");
 }
 
-rnaToDna (nucSeq) {
+rnaStrToDna (nucSeq) {
   return nucSeq.replace(/U/g, "T");
 }
 
