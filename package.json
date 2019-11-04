@@ -1,6 +1,6 @@
 {
   "name": "codon",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "used to manipulate and convert genetic strings from nucleotide to codon to protein",
   "main": "index.js",
   "scripts": {
