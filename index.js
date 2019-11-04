@@ -19,6 +19,9 @@ exports.nucStrToVal = function (nucSeq) {
       case 'T':
         valSeq += '0';
         break;
+      case 'U':
+        valSeq += '0';
+        break;
       case 'C':
         valSeq += '1';
         break;
