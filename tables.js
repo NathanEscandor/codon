@@ -1,5 +1,46 @@
 class tables {
   constructor() {
+
+    this.dnaNucleotides = ['T', 'C', 'A', 'G'];
+    this.rnaNucleotides = ['U', 'C', 'A', 'G'];
+    // this.dnaNucleotides = {
+    //   'T' : 0,
+    //   'C' : 1,
+    //   'A' : 2,
+    //   'G' : 3
+    // };
+
+    // this.rnaNucleotides = {
+    //   'U' : 0,
+    //   'C' : 1,
+    //   'A' : 2,
+    //   'G' : 3
+    // };
+
+
+
+    this.rnaCodons = [
+      'UUU', 'UUC', 'UUA', 'UUG',
+      'UCU', 'UCC', 'UCA', 'UCG',
+      'UAU', 'UAC', 'UAA', 'UAG',
+      'UGU', 'UGC', 'UGA', 'UGG',
+    
+      'CUU', 'CUC', 'CUA', 'CUG',
+      'CCU', 'CCC', 'CCA', 'CCG',
+      'CAU', 'CAC', 'CAA', 'CAG',
+      'CGU', 'CGC', 'CGA', 'CGG',
+    
+      'AUU', 'AUC', 'AUA', 'AUG',
+      'ACU', 'ACC', 'ACA', 'ACG',
+      'AAU', 'AAC', 'AAA', 'AAG',
+      'AGU', 'AGC', 'AGA', 'AGG',
+    
+      'GUU', 'GUC', 'GUA', 'GUG',
+      'GCU', 'GCC', 'GCA', 'GCG',
+      'GAU', 'GAC', 'GAA', 'GAG',
+      'GGU', 'GGC', 'GGA', 'GGG',
+    ];
+
     this.nucleotide = [ 'T', 'C', 'A', 'G' ];
 
     this.codon = [
