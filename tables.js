@@ -3,21 +3,28 @@ class tables {
 
     this.dnaNucleotides = ['T', 'C', 'A', 'G'];
     this.rnaNucleotides = ['U', 'C', 'A', 'G'];
-    // this.dnaNucleotides = {
-    //   'T' : 0,
-    //   'C' : 1,
-    //   'A' : 2,
-    //   'G' : 3
-    // };
 
-    // this.rnaNucleotides = {
-    //   'U' : 0,
-    //   'C' : 1,
-    //   'A' : 2,
-    //   'G' : 3
-    // };
-
-
+    this.dnaCodons = [
+      'TTT', 'TTC', 'TTA', 'TTG',
+      'TCT', 'TCC', 'TCA', 'TCG',
+      'TAT', 'TAC', 'TAA', 'TAG',
+      'TGT', 'TGC', 'TGA', 'TGG',
+    
+      'CTT', 'CTC', 'CTA', 'CTG',
+      'CCT', 'CCC', 'CCA', 'CCG',
+      'CAT', 'CAC', 'CAA', 'CAG',
+      'CGT', 'CGC', 'CGA', 'CGG',
+    
+      'ATT', 'ATC', 'ATA', 'ATG',
+      'ACT', 'ACC', 'ACA', 'ACG',
+      'AAT', 'AAC', 'AAA', 'AAG',
+      'AGT', 'AGC', 'AGA', 'AGG',
+    
+      'GTT', 'GTC', 'GTA', 'GTG',
+      'GCT', 'GCC', 'GCA', 'GCG',
+      'GAT', 'GAC', 'GAA', 'GAG',
+      'GGT', 'GGC', 'GGA', 'GGG',
+    ];
 
     this.rnaCodons = [
       'UUU', 'UUC', 'UUA', 'UUG',
@@ -40,7 +47,7 @@ class tables {
       'GAU', 'GAC', 'GAA', 'GAG',
       'GGU', 'GGC', 'GGA', 'GGG',
     ];
-
+//////////////////////////old shit below
     this.nucleotide = [ 'T', 'C', 'A', 'G' ];
 
     this.codon = [
