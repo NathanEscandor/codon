@@ -33,12 +33,12 @@ class Codon {
   }
 
   numberToAminoAcid(codArray) {
-    return codArray.map(i => tables.aminoacid[i]);
+    return codArray.map(i => tables.aminoacids[i]);
   }
 
   sequenceToAminoAcid(codArray) {
     const codIndexArray = this.toNumber(codArray);
-    return codIndexArray.map(i => tables.aminoacid[i]);
+    return codIndexArray.map(i => tables.aminoacids[i]);
   }
 }
 
