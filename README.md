@@ -20,16 +20,16 @@ const cod = require('central-dogma').codon;
 Convert DNA Nucleotide sequence to codon to amino acid
 ```sh
 const dnaSequence = 'CCTATTAATAAA';
-const dnaCodons = nuc.toCodon(dnaSequence);           // toCodon = ['CCT', 'ATT', 'AAT', 'AAA']
+const dnaCodons = nuc.toCodon(dnaSequence);         // toCodon = ['CCT', 'ATT', 'AAT', 'AAA']
 const aminoAcids = cod.sequenceToAminoAcid(dnaCodons);
-console.log(aminoAcids)                                   // --> ['P', 'I', 'N', 'K']
+console.log(aminoAcids)                             // --> ['P', 'I', 'N', 'K']
 ```
 
 Convert DNA Nucleotide sequence to its complement
 ```sh
 const dnaSequence = 'CCTATTAATAAA';
 const complement = nuc.toComplement(dnaSequence); 
-console.log(complement)                         // --> 'GGATAATTATTT'
+console.log(complement)                             // --> 'GGATAATTATTT'
 ```
 
 Convert DNA Nucleotide sequence to its RNA complement to codon number representation to amino acid
@@ -52,6 +52,4 @@ In future versions, I intend to implement:
 
 
    [Central Dogma of Biology]: <https://en.wikipedia.org/wiki/Central_dogma_of_molecular_biology>
-
-
 
