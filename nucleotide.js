@@ -4,8 +4,8 @@ const tables = require('./tables.js');
 
 class Nucleotide {
   constructor() {
-    this.base = 'dna';
-    this.table = tables.dnaNucleotides; //new table goes here
+    this.base = 'dna'; // dna || rna
+    this.table = tables.dnaNucleotides;
   }
 
   setBase(base_type) {
