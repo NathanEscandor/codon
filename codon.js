@@ -18,7 +18,7 @@ class Codon {
 
   toNumber(codArray) {
     let newArray = [];
-    for (codon in codArray) {
+    for (const codon of codArray) {
       newArray.push(this.table.indexOf(codon));
     }
     return newArray;
@@ -26,7 +26,7 @@ class Codon {
 
   toSequence(codArray) {
     let newArray = [];
-    for (codonNumber in codArray) {
+    for (const codonNumber of codArray) {
       newArray.push(this.table[codonNumber]);
     }
     return newArray;
