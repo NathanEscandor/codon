@@ -20,7 +20,7 @@ const cod = require('central-dogma').codon;
 Convert DNA Nucleotide sequence to codon to amino acid
 ```sh
 const dnaSequence = 'CCTATTAATAAA';
-const dnaCodons = nuc.toCodon(dnaSequence);         // toCodon = ['CCT', 'ATT', 'AAT', 'AAA']
+const dnaCodons = nuc.toCodon(dnaSequence);         // dnaCodons = ['CCT', 'ATT', 'AAT', 'AAA']
 const aminoAcids = cod.sequenceToAminoAcid(dnaCodons);
 console.log(aminoAcids)                             // --> ['P', 'I', 'N', 'K']
 ```
@@ -35,12 +35,12 @@ console.log(complement)                             // --> 'GGATAATTATTT'
 Convert DNA Nucleotide sequence to its RNA complement to codon number representation to amino acid
 ```sh
 const dnaSequence = 'GTGCTTGAGGACCGA';
-const complement = nuc.toComplement(dnaSequence);   //complement = 'GTGCTTGAGGACCGA'
-const rnaComplement = nuc.dnaToRna(complement);     //rnaComplement = 'GUGCUUGAGGACCGA'
-const rnaCodons = nuc.toCodon(rnaComplement);       //rnaCodons = ['GUG', 'CUU', 'GAG', 'GAC', 'CGA']
+const complement = nuc.toComplement(dnaSequence);   // complement = 'GTGCTTGAGGACCGA'
+const rnaComplement = nuc.dnaToRna(complement);     // rnaComplement = 'GUGCUUGAGGACCGA'
+const rnaCodons = nuc.toCodon(rnaComplement);       // rnaCodons = ['GUG', 'CUU', 'GAG', 'GAC', 'CGA']
 
-cod.setBase('rna')                                  //change the lookup table from DNA to RNA 
-const rnaCodonNumbers = cod.toNumber(rnaCodons);    //rnaCodonNumbers = [ 25, 58, 17, 19, 52 ]
+cod.setBase('rna')                                  // change the lookup table from DNA to RNA 
+const rnaCodonNumbers = cod.toNumber(rnaCodons);    // rnaCodonNumbers = [ 25, 58, 17, 19, 52 ]
 const aminoAcids = cod.numberToAminoAcid(rnaCodonNumbers);
 console.log(aminoAcids)                             // --> ['H', 'E', 'L', 'L', 'A']
 ```
@@ -51,5 +51,5 @@ In future versions, I intend to implement:
 - the ability to supply a custom amino acid dictionary - useful in protein encoding for other species (eg 'TTT' codon encodes for Tyrosine instead of Phenyalanine)
 
 
-   [Central Dogma of Biology]: <https://en.wikipedia.org/wiki/Central_dogma_of_molecular_biology>
+  [Central Dogma of Biology]: <https://en.wikipedia.org/wiki/Central_dogma_of_molecular_biology>
 
