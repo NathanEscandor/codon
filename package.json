@@ -2,9 +2,9 @@
   "name": "central-dogma",
   "version": "0.0.4",
   "description": "used to manipulate and convert genetic strings from nucleotide to codon to protein",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",

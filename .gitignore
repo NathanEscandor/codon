@@ -1,3 +1,6 @@
+# Dist folder that npm run build outputs to
+dist/
+
 # Logs
 logs
 *.log
