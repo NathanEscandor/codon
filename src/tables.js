@@ -69,4 +69,4 @@ class tables {
   }
 }
 
-module.exports = new tables();
+export default new tables();

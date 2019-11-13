@@ -1,5 +1,5 @@
 'use strict';
-const tables = require('./tables.js');
+import tables from './tables';
 
 class Codon {
   constructor() {
@@ -43,4 +43,4 @@ class Codon {
 }
 
 const cod = new Codon();
-module.exports = cod;
+export default cod;

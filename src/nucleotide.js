@@ -1,6 +1,5 @@
 'use strict';
-
-const tables = require('./tables.js');
+import tables from './tables';
 
 class Nucleotide {
   constructor() {
@@ -104,4 +103,4 @@ class Nucleotide {
 }
 
 const nuc = new Nucleotide(); //not 100% sure that this is the way to do this....
-module.exports = nuc;
+export default nuc;
