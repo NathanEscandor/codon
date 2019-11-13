@@ -1,6 +1,6 @@
 {
   "name": "central-dogma",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "used to manipulate and convert genetic strings from nucleotide to codon to protein",
   "main": "dist/index.js",
   "scripts": {
