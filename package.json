@@ -23,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/NathanEscandor/codon/issues"
   },
-  "homepage": "https://github.com/NathanEscandor/codon#readme"
+  "homepage": "https://github.com/NathanEscandor/codon#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
 }
