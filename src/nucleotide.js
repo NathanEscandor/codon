@@ -7,13 +7,14 @@ class Nucleotide {
     this.table = tables.dnaNucleotides;
   }
 
-  setBase(base_type) {
-    if (base_type === 'dna' || base_type === 'rna') {
-      const table_name = `${base_type}Nucleotides`;
+  setBase(baseType) {
+    if (baseType === 'dna' || baseType === 'rna') {
+      const table_name = `${baseType}Nucleotides`;
 
-      this.base = base_type;
+      this.base = baseType;
       this.table = tables[table_name];
     }
+    return;
   }
 
   toValue(nucSeq) {
