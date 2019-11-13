@@ -2,9 +2,9 @@
   "name": "central-dogma",
   "version": "0.0.4",
   "description": "used to manipulate and convert genetic strings from nucleotide to codon to protein",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/NathanEscandor/codon/issues"
   },
-  "homepage": "https://github.com/NathanEscandor/codon#readme"
+  "homepage": "https://github.com/NathanEscandor/codon#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
 }
