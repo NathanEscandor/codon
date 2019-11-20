@@ -4,7 +4,8 @@
   "description": "used to manipulate and convert genetic strings from nucleotide to codon to protein",
   "main": "dist/index.js",
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,8 @@
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "babel-loader": "^8.0.6",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   }
