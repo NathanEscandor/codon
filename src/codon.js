@@ -9,7 +9,7 @@ class Codon {
 
   setBase(baseType) {
     if (baseType === 'dna' || baseType === 'rna') {
-      const table_name = `${baseType}Nucleotides`;
+      const table_name = `${baseType}Codons`;
 
       this.base = baseType;
       this.table = tables[table_name];
